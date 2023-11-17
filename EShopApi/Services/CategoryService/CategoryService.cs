@@ -55,7 +55,7 @@ namespace EShopApi.Services.CategoryService
             Category? category = await _context.Categories.FindAsync(id);
             if (category == null) return null;
 
-            category.UpdateCategory(request.Name, request.ParentCategory, request.ChildCategories);
+            category.UpdateCategory(request.Name, request.ParentCategory, request.ChildCategories, request.Products);
 
             await _context.SaveChangesAsync();
 

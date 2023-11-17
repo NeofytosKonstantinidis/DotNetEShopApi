@@ -55,7 +55,7 @@ namespace EShopApi.Services.BrandService
             Brand? brand = await _context.Brands.FindAsync(id);
             if (brand == null) return null;
 
-            brand.UpdateBrand(request.Name, request.ParentBrand, request.ChildBrands);
+            brand.UpdateBrand(request.Name, request.ParentBrand);
 
             await _context.SaveChangesAsync();
 

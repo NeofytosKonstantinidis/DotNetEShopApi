@@ -6,13 +6,12 @@
         public string? Name { get; set; }
 
         public Brand? ParentBrand { get; set; } = null;
-        public List<Brand>? ChildBrands { get; set; }
 
-        public void UpdateBrand(string? name, Brand? parentBrand, List<Brand>? childBrands)
+
+        public void UpdateBrand(string? name, Brand? parentBrand)
         {
             Name = name;
             ParentBrand = parentBrand;
-            ChildBrands = childBrands;
         }
     }
 }
